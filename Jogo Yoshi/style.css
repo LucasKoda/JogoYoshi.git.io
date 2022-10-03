@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.jogo {
+    width: 100%;
+    height: 937px;
+    border-bottom: 20px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #2d60ee, #3066ea, #356ce6, #3c72e1, #4477dc, #4a7cdb, #5080d9, #5685d7, #5b8ada, #5f8fdc, #6493df, #6998e1);
+}
+
+.tubo {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: animaçao-tubo    2s  infinite linear; 
+}
+
+@keyframes animaçao-tubo{
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.yoshi {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.pulo {
+    animation: pulo-yoshi   500ms   ease-out;
+}
+
+@keyframes pulo-yoshi {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+    
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.nuvens {
+    width: 550px;
+    position: absolute;
+    animation: animaçao-nuvens      14s     infinite linear;
+}
+
+@keyframes animaçao-nuvens {
+    from {
+        right: -550px;
+    } 
+    
+    to {
+        right: 100%;
+    }
+}
